@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">Quiz App</string>
-    <string name="message">Hello World!</string>
-    <string name="name_hint">IDK what to put here</string>
-    <string name="buttonText">Submit</string>
+    <string name="app_name">Lab01</string>
+    <string name="message">Stopped: 0</string>
+    <string name="name_hint">Game Input</string>
+    <string name="buttonText">Change the color</string>
+    <string name="empty" />
+    <string name="increase">Start or Stop</string>
 </resources>
