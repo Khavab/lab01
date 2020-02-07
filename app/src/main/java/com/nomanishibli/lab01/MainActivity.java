@@ -55,7 +55,12 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 if(started) {
                     count += 1;
+                    r = (int) (Math.random() * 256);
+                    g = (int) (Math.random() * 256);
+                    b = (int) (Math.random() * 256);
+                    counter.setTextColor(Color.rgb(r, g, b));
                     counter.setText("Started: " + count);
+
                     h.postDelayed(this, 1000);
                 }
                 else
