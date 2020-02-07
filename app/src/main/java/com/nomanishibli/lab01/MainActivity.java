@@ -6,6 +6,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import android.graphics.Color;
 import android.os.Bundle;
 
+import android.os.Handler;
 import android.text.Layout;
 import android.util.Log;
 import android.view.View;
@@ -21,8 +22,7 @@ public class MainActivity extends AppCompatActivity {
     int count = 0;
     TextView counter;
     Button increase;
-    Timer t = new Timer();
-
+    final Handler h = new Handler();
     ConstraintLayout bg;
 
     @Override
@@ -44,23 +44,32 @@ public class MainActivity extends AppCompatActivity {
         Log.d("deb", "it worked i think");
     }
 
+
+
+
+
+
     public void increaser(View view) {
         increase = findViewById(R.id.increase);
+        counter = findViewById(R.id.textBox);
         started = !started;
 
-        if(started)
-            t.scheduleAtFixedRate(new TimerTask() {
-                @Override
-                public void run() {
-                    count += count;
+        h.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if(started) {
+                    count += 1;
+                    counter.setText("Started: " + count);
+                    h.postDelayed(this, 1000);
                 }
-            }, 1000, 1000);
+                else
+                    counter.setText(("Stopped: " + count));
 
-        else
-            t.cancel();
+            }
+        }, 1000);
+
+
     }
-
-
 
 
 }
