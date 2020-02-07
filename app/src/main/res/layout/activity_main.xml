@@ -56,7 +56,7 @@
         android:layout_height="wrap_content"
         android:text="@string/tryT"
         android:onClick="move"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:background="@drawable/circle"
         app:layout_constraintBottom_toTopOf="@+id/clickButton"
         app:layout_constraintEnd_toEndOf="parent"

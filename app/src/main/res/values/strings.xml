@@ -5,5 +5,5 @@
     <string name="buttonText">Change the color</string>
     <string name="empty" />
     <string name="increase">Start or Stop</string>
-    <string name="tryT">Try to press me</string>
+    <string name="tryT">Press me</string>
 </resources>
